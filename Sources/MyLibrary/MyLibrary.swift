@@ -2,8 +2,6 @@
 import Foundation
 import Alamofire
 
-
-public typealias Parameters = [String: AnyObject]
 public typealias Headers = HTTPHeaders
 public typealias JSONObject = [String: AnyObject]
 public typealias JSONArray = [AnyObject]
