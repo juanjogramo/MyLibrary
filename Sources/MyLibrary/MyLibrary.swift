@@ -22,6 +22,13 @@ public protocol Requestable: class {
                    encoding: URLEncoding,
                    completion: @escaping (Result<Data, Error>) -> ())
   
+  /// Request an object from an url resource
+  /// - Parameter url: Endpoint resource
+  /// - Parameter verb: HTTP Method 'GET', 'POST', 'DELETE', 'UPDATE', 'PATCH'
+  /// - Parameter parameters: Body or query parameters are optionals
+  /// - Parameter headers: Headers are optionals
+  /// - Parameter encoding: URL encoding type
+  /// - Parameter completion: Response after the request is complete
   func requestObject(to url: String,
                      verb: HTTPMethod,
                      parameters: Parameters?,
@@ -29,6 +36,13 @@ public protocol Requestable: class {
                      encoding: URLEncoding,
                      completion: @escaping (Result<JSONObject, Error>) -> ())
   
+  /// Request an array from an url resource
+  /// - Parameter url: Endpoint resource
+  /// - Parameter verb: HTTP Method 'GET', 'POST', 'DELETE', 'UPDATE', 'PATCH'
+  /// - Parameter parameters: Body or query parameters are optionals
+  /// - Parameter headers: Headers are optionals
+  /// - Parameter encoding: URL encoding type
+  /// - Parameter completion: Response after the request is complete
   func requestArray(to url: String,
                     verb: HTTPMethod,
                     parameters: Parameters?,
